@@ -48,13 +48,15 @@ app.get('/api/items/:id', (req, res) => {
 app.post('/api/items', (req, res) => {
     const newItem = { id: items.length + 1, name: req.body.name, email: req.body.email };
     items.push(newItem);
-    
+
     res.status(201).json(newItem);
 });
 
 // PUT - Update an item by ID
+
 app.put('/api/items/:id', (req, res) => {
     const item = items.find(
+        
         i => i.id === parseInt(req.params.id));
     if (item) {
         item.name = req.body.name;
