@@ -22,7 +22,9 @@ let items = [
 
 
 // GET all items
+
 app.get('/api/items', (req, res) => {    
+    
   res.json(items);
 });
 
