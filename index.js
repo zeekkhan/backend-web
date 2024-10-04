@@ -14,6 +14,7 @@ app.use(cors());
 app.use(express.json());
 
 // Simulated database (array of objects)
+
 let items = [
     { id: 1, name: 'Joe Biden',email:"joebiden@gmail.com" },
     { id: 2, name: 'John', email:"john@gmail.com"}
