@@ -24,11 +24,12 @@ let items = [
 // GET all items
 
 app.get('/api/items', (req, res) => {    
-    
+
   res.json(items);
 });
 
 // GET item by ID
+
 app.get('/api/items/:id', (req, res) => {
 
     const item = items.find(i => i.id === parseInt(req.params.id));
@@ -36,6 +37,7 @@ app.get('/api/items/:id', (req, res) => {
         res.json(item);
     } else {
 
+        
         res.status(404).json({ message: 'Item not found' });
 
     }
