@@ -37,16 +37,18 @@ app.get('/api/items/:id', (req, res) => {
         res.json(item);
     } else {
 
-        
+
         res.status(404).json({ message: 'Item not found' });
 
     }
 });
 
 // POST - Add a new item
+
 app.post('/api/items', (req, res) => {
     const newItem = { id: items.length + 1, name: req.body.name, email: req.body.email };
     items.push(newItem);
+    
     res.status(201).json(newItem);
 });
 
